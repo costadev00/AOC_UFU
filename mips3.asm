@@ -5,9 +5,7 @@
 	frase: .asciiz "A sua idade = "
 	
 .text
-	li $v0,4
-	la, $a0 frase
-	syscall
+	addiu $s0, $zero, 1
+	move $a0, $s0
 	li $v0, 1
-	lw $a0 , idade
 	syscall
